@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>袁申如 · 作品集 | 语言 · 内容 · 设计</title>
+<script>document.documentElement.classList.add("js");</script>
+<meta name="description" content="袁申如的个人作品集：多语种文化宣传设计、公众号内容运营、跨文化与红色文化传播、交互式语言学习项目。" />
+<meta name="author" content="袁申如" />
+<meta property="og:title" content="袁申如 · 作品集" />
+<meta property="og:description" content="语言 · 内容 · 设计 —— 用专业能力讲好中国故事。" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2317564F'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Songti SC,serif' fill='%23FBFBF9' text-anchor='middle'%3E%E8%A2%81%3C/text%3E%3C/svg%3E" />
+<style>
+/* ============ tokens ============ */
+:root{
+  --bg:#FBFBF9;
+  --bg-soft:#F5F4F0;
+  --surface:#FFFFFF;
+  --ink:#15171C;
+  --ink-2:#4C515A;
+  --ink-3:#8B9098;
+  --line:#E8E6E0;
+  --line-2:#F0EEE9;
+  --accent:#17564F;
+  --accent-2:#2E7D72;
+  --accent-soft:#EAF1EF;
+  --paper:#FBF7F0;
+  --radius:18px;
+  --radius-s:12px;
+  --shadow-s:0 1px 2px rgba(21,23,28,.05);
+  --shadow-m:0 22px 45px -30px rgba(21,23,28,.45);
+  --shadow-l:0 40px 80px -50px rgba(21,23,28,.55);
+  --serif:"Songti SC","STSong","STZhongsong","Source Han Serif SC","Noto Serif SC","SimSun",ui-serif,Georgia,serif;
+  --sans:"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --maxw:1120px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 600px at 82% -8%, #EDF3F1 0%, rgba(237,243,241,0) 62%),
+    radial-gradient(900px 520px at -6% 12%, #F7F3EC 0%, rgba(247,243,236,0) 58%),
+    var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;font-weight:600;line-height:1.28;letter-spacing:.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;cursor:pointer}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif)}
+
+/* ============ nav ============ */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:60;
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  background:rgba(251,251,249,.72);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, background .3s ease;
+}
+.nav.is-stuck{border-bottom-color:var(--line);background:rgba(251,251,249,.9)}
+.nav-inner{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:baseline;gap:10px;font-family:var(--serif);font-size:19px;letter-spacing:.06em}
+.brand small{font-family:var(--sans);font-size:11px;letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase}
+.nav-links{display:flex;gap:30px;margin-left:auto;font-size:14.5px;color:var(--ink-2)}
+.nav-links a{position:relative;padding:6px 0;transition:color .2s ease}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--accent);transition:right .28s ease}
+.nav-links a:hover,.nav-links a.is-active{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a.is-active::after{right:0}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;font-size:14px;padding:9px 16px;
+  border:1px solid var(--line);border-radius:999px;background:var(--surface);
+  box-shadow:var(--shadow-s);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:var(--shadow-m);border-color:#DAD7CF}
+.nav-cta svg{width:15px;height:15px;color:var(--accent)}
+
+/* ============ hero ============ */
+.hero{padding:150px 0 92px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:clamp(32px,5vw,72px);align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.16em;
+  color:var(--accent);text-transform:uppercase;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.6}
+.hero h1{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(52px,8.4vw,86px);line-height:1.06;letter-spacing:.06em;margin:22px 0 6px;
+}
+.hero .latin{
+  font-size:12px;letter-spacing:.42em;color:var(--ink-3);text-transform:uppercase;
+}
+.hero .lead{
+  margin-top:26px;font-size:clamp(17px,2.1vw,20.5px);line-height:1.72;color:var(--ink-2);
+  max-width:36ch;text-wrap:pretty;
+}
+.hero .lead strong{color:var(--ink);font-weight:600}
+.hero .sub{margin-top:18px;color:var(--ink-2);font-size:15.5px;max-width:44ch;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;
+  font-size:15px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-s);
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-m);border-color:#D9D6CE}
+.btn-primary{background:var(--accent);color:#FBFBF9;border-color:var(--accent)}
+.btn-primary:hover{background:#134A44;border-color:#134A44}
+.btn svg{width:16px;height:16px}
+
+.portrait-wrap{position:relative;justify-self:center;width:min(340px,100%)}
+.portrait-wrap::before{
+  content:"";position:absolute;inset:26px -22px -22px 22px;border-radius:22px;
+  background:linear-gradient(155deg,#EAF1EF,#F7F3EC 78%);
+  z-index:0;opacity:.95;
+}
+.portrait{position:relative;z-index:1;border-radius:var(--radius);overflow:hidden;border:1px solid #EAE7E0;box-shadow:var(--shadow-l);background:var(--surface)}
+.portrait img{aspect-ratio:3/4;object-fit:cover;object-position:50% 22%}
+.portrait-cap{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px 18px 14px;
+  display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+  font-size:12.5px;color:var(--ink-2);letter-spacing:.04em;
+  background:linear-gradient(to top,rgba(255,255,255,.96),rgba(255,255,255,.76) 55%,rgba(255,255,255,0));
+}
+.portrait-cap span:last-child{color:var(--ink-3)}
+
+.stats{
+  margin-top:72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.stat{padding:26px 22px 24px;border-left:1px solid var(--line-2)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.02em}
+.stat span{display:block;margin-top:6px;font-size:12.5px;letter-spacing:.12em;color:var(--ink-3)}
+
+/* ============ sections ============ */
+.sec{padding:clamp(76px,9vw,116px) 0;border-top:1px solid var(--line)}
+section[id]{scroll-margin-top:88px}
+.sec-head{display:grid;grid-template-columns:76px minmax(0,1fr);gap:clamp(16px,3vw,34px);align-items:start;margin-bottom:clamp(36px,5vw,58px)}
+.sec-num{font-family:var(--serif);font-size:15px;letter-spacing:.16em;color:var(--ink-3);padding-top:8px}
+.sec-title{font-family:var(--serif);font-size:clamp(26px,3.6vw,38px);letter-spacing:.04em}
+.sec-title em{font-style:normal;color:var(--accent)}
+.sec-kicker{margin-top:14px;color:var(--ink-2);max-width:64ch;text-wrap:pretty}
+
+/* sub heading inside works */
+.sub-head{display:flex;align-items:baseline;gap:16px;margin:64px 0 26px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sub-head:first-of-type{margin-top:0}
+.sub-index{font-family:var(--serif);font-size:14px;color:var(--accent);letter-spacing:.1em;white-space:nowrap}
+.sub-head h3{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);letter-spacing:.03em}
+.sub-head .note{margin-left:auto;font-size:12.5px;color:var(--ink-3);letter-spacing:.08em;white-space:nowrap}
+
+/* ============ about ============ */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.trait{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line-2)}
+.trait:first-child{border-top:0;padding-top:0}
+.trait .ico{
+  flex:0 0 40px;height:40px;border-radius:12px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;
+}
+.trait .ico svg{width:19px;height:19px}
+.trait h4{font-size:16.5px;letter-spacing:.02em}
+.trait p{margin-top:7px;color:var(--ink-2);font-size:14.8px;line-height:1.78}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 24px;box-shadow:var(--shadow-s)}
+.panel + .panel{margin-top:18px}
+.panel h4{font-size:13px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;font-weight:500}
+.kv{display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;padding:13px 0;border-top:1px solid var(--line-2);font-size:14.8px}
+.kv:first-of-type{margin-top:14px}
+.kv dt{color:var(--ink-3);font-size:13.5px;letter-spacing:.04em}
+.kv dd{margin:0;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:var(--bg-soft);border:1px solid var(--line-2);font-size:13px;color:var(--ink-2);white-space:nowrap}
+.chip.accent{background:var(--accent-soft);border-color:#D6E5E1;color:var(--accent)}
+
+/* ============ featured trifold ============ */
+.feature{
+  display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(22px,3.4vw,44px);
+  align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(24px,3vw,40px);box-shadow:var(--shadow-m);
+}
+.feature h4{font-family:var(--serif);font-size:clamp(21px,2.7vw,26px);letter-spacing:.03em}
+.feature .desc{margin-top:16px;color:var(--ink-2);font-size:15.2px;line-height:1.85}
+.feature .meta{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.feature .meta div{display:grid;grid-template-columns:74px minmax(0,1fr);gap:12px;font-size:14.5px;color:var(--ink-2)}
+.feature .meta dt,.feature .meta span:first-child{color:var(--ink-3);font-size:13px}
+.feature .chips{margin-top:24px}
+.feature .action{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.muted{color:var(--ink-3);font-size:12.8px}
+
+.mock{background:linear-gradient(168deg,#F6F4EF,#EFF3F1 78%);border:1px solid var(--line);border-radius:14px;padding:clamp(16px,2.4vw,26px)}
+.mock svg{width:100%;height:auto}
+.mock-cap{margin-top:14px;text-align:center;font-size:12.5px;color:var(--ink-3);letter-spacing:.08em}
+
+/* ============ cards ============ */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{
+  display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-s);
+  transition:transform .32s cubic-bezier(.2,.7,.3,1),box-shadow .32s ease,border-color .32s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m);border-color:#DEDBD4}
+.card-media{display:block;overflow:hidden;background:var(--bg-soft);border-bottom:1px solid var(--line-2)}
+.card-media img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+.card-media.wide img{aspect-ratio:16/7}
+.card:hover .card-media img{transform:scale(1.035)}
+.card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.card-meta{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink-3);letter-spacing:.05em}
+.dot{width:3px;height:3px;border-radius:50%;background:currentColor;opacity:.7}
+.card-title{margin-top:12px;font-size:16.6px;line-height:1.5;letter-spacing:.01em}
+.card-title a:hover{color:var(--accent)}
+.card-text{margin-top:10px;color:var(--ink-2);font-size:14.2px;line-height:1.78;flex:1}
+.card-link{
+  margin-top:18px;display:inline-flex;align-items:center;gap:7px;font-size:13.6px;color:var(--accent);
+  letter-spacing:.04em;align-self:flex-start;
+}
+.card-link span{transition:transform .25s ease}
+.card-link:hover span{transform:translate(2px,-2px)}
+.card-tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+
+/* ============ projects ============ */
+.projects{display:grid;grid-template-columns:1fr;gap:26px}
+.project{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-s);transition:transform .32s cubic-bezier(.2,.7,.3,1),box-shadow .32s ease}
+.project:hover{transform:translateY(-4px);box-shadow:var(--shadow-m)}
+.project-media{
+  background:linear-gradient(160deg,#F3F5F3,#EBF0EE 70%,#F7F3EC);border-right:1px solid var(--line-2);
+  display:grid;place-items:center;padding:34px 34px 0;min-height:400px;overflow:hidden;
+}
+.project-body{padding:clamp(24px,3vw,38px);display:flex;flex-direction:column}
+.project-body h4{font-family:var(--serif);font-size:clamp(19px,2.4vw,23px);letter-spacing:.03em}
+.project-body .sub{margin-top:8px;font-size:13px;color:var(--ink-3);letter-spacing:.06em}
+.project-body p{margin-top:16px;color:var(--ink-2);font-size:14.8px;line-height:1.85}
+.project-links{margin-top:auto;padding-top:26px;display:flex;flex-direction:column;gap:10px}
+.plink{
+  display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--line);border-radius:12px;
+  font-size:14.2px;background:var(--bg);transition:border-color .25s ease,background .25s ease,transform .25s ease;
+}
+.plink:hover{border-color:#D6E5E1;background:var(--accent-soft);transform:translateX(2px)}
+.plink .label{font-weight:500}
+.plink .url{margin-left:auto;font-size:12.2px;color:var(--ink-3);max-width:44%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.plink svg{width:15px;height:15px;color:var(--accent);flex:0 0 15px}
+
+.phone{width:min(276px,74%);border-radius:32px;background:#1B1D22;padding:11px;box-shadow:var(--shadow-l);transform:translateY(8px)}
+.phone img{border-radius:23px;width:100%;display:block;object-fit:cover;object-position:top center;max-height:430px}
+.window{width:100%;border-radius:12px 12px 0 0;overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-l);transform:translateY(6px)}
+.window-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#F4F3EF;border-bottom:1px solid var(--line-2)}
+.window-bar i{width:8px;height:8px;border-radius:50%;background:#DAD7CF;display:block}
+.window img{width:100%;max-height:300px;object-fit:cover;object-position:top center}
+
+/* ============ timeline ============ */
+.tl-group{margin-top:46px}
+.tl-group:first-of-type{margin-top:0}
+.tl-group > h3{font-family:var(--serif);font-size:17px;letter-spacing:.12em;color:var(--ink-3);font-weight:500;margin-bottom:18px}
+.tl-item{display:grid;grid-template-columns:150px minmax(0,1fr);gap:clamp(18px,3vw,40px);padding:24px 0;border-top:1px solid var(--line-2)}
+.tl-item:last-child{border-bottom:1px solid var(--line-2)}
+.tl-when{font-size:13px;color:var(--ink-3);letter-spacing:.06em;padding-top:4px}
+.tl-main h4{font-size:17px;letter-spacing:.02em}
+.tl-main .org{margin-top:6px;font-size:13.5px;color:var(--accent);letter-spacing:.04em}
+.tl-main ul{margin-top:12px;display:flex;flex-direction:column;gap:7px}
+.tl-main li{position:relative;padding-left:16px;color:var(--ink-2);font-size:14.6px;line-height:1.8}
+.tl-main li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:1.5px;background:var(--ink-3)}
+
+/* ============ honors ============ */
+.honor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.honor-item{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow-s)}
+.honor-item .yr{font-family:var(--serif);font-size:13px;color:var(--accent);letter-spacing:.08em;padding-top:3px;white-space:nowrap}
+.honor-item p{font-size:14.6px;color:var(--ink-2);line-height:1.8}
+.honor-item strong{color:var(--ink);font-weight:600}
+
+/* ============ contact ============ */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(30px,4vw,54px);box-shadow:var(--shadow-m)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:center}
+.contact h3{font-family:var(--serif);font-size:clamp(24px,3.4vw,34px);letter-spacing:.04em}
+.contact p{margin-top:16px;color:var(--ink-2);max-width:46ch}
+.mailbag{display:flex;flex-direction:column;gap:12px}
+.mailcard{
+  display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--bg);
+  transition:border-color .25s ease,transform .25s ease,background .25s ease;
+}
+.mailcard:hover{border-color:#D6E5E1;background:var(--accent-soft);transform:translateY(-2px)}
+.mailcard .k{font-size:12.5px;color:var(--ink-3);letter-spacing:.1em;display:block}
+.mailcard .v{font-size:15.4px;letter-spacing:.01em}
+.mailcard svg{width:18px;height:18px;color:var(--accent);margin-left:auto}
+
+.foot{padding:44px 0 60px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;color:var(--ink-3);font-size:12.8px;letter-spacing:.06em}
+
+/* toast */
+.toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  background:var(--ink);color:#FBFBF9;padding:11px 20px;border-radius:999px;font-size:14px;z-index:90;
+  transition:opacity .3s ease,transform .3s ease;box-shadow:var(--shadow-m);
+}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+/* reveal（无 JS 时内容照常显示） */
+.js [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+
+/* ============ responsive ============ */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .portrait-wrap{justify-self:start;width:min(300px,72%)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid var(--line-2)}
+  .about-grid,.feature,.project,.contact-grid,.grid-2{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-media{border-right:0;border-bottom:1px solid var(--line-2);min-height:300px}
+}
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .nav-links{display:none}
+  .hero{padding:118px 0 68px}
+  .sec-head{grid-template-columns:1fr;gap:8px}
+  .sec-num{padding-top:0}
+  .grid-3,.honor-grid{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr;gap:10px}
+  .kv{grid-template-columns:1fr;gap:2px}
+  .feature .meta div{grid-template-columns:1fr;gap:2px}
+  .sub-head{flex-wrap:wrap}
+  .sub-head .note{margin-left:0;width:100%}
+  .plink .url{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js [data-reveal]{opacity:1;transform:none}
+}
+
+@media print{
+  .nav,.toast,.hero-actions{display:none!important}
+  body{background:#fff}
+  .card,.project,.feature,.panel,.contact,.honor-item{box-shadow:none;break-inside:avoid}
+  .sec{padding:28px 0;break-inside:auto}
+  a::after{content:"";}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">袁申如<small>Yuan Shenru</small></a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#about">关于</a>
+      <a href="#works">作品</a>
+      <a href="#experience">经历</a>
+      <a href="#honors">荣誉</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <a class="nav-cta" href="mailto:yuanshenru@outlook.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+      邮箱联系
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">华中科技大学 · 外国语语言学 硕士在读</span>
+        <h1>袁申如</h1>
+        <div class="latin">AI Workflow · Education · Intercultural Communication</div>
+        <p class="lead">把跨文化与教育内容，做成<strong>可体验、可复用</strong>的数字作品。</p>
+        <p class="sub">从教材案例生产到课程运营，我用 AI 工作流减少重复处理，用交互设计让知识更容易理解。这里展示我的项目、内容作品与研究经历。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#works">
+            浏览作品
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <button class="btn" type="button" data-copy="yuanshenru@outlook.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 5.5v-1a2 2 0 0 0-2-2h-9a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h1"/></svg>
+            复制邮箱
+          </button>
+          <a class="btn" href="tel:15170693913">151-7069-3913</a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <div class="portrait">
+          <img src="assets/profile/portrait.jpg" alt="袁申如的个人照片" />
+          <div class="portrait-cap">
+            <span>华中科技大学 外国语语言学</span>
+            <span>2025 – 2028</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="stats" data-reveal>
+        <div class="stat"><b>前 3%</b><span>国家奖学金</span></div>
+        <div class="stat"><b>优秀</b><span>专四 / 专八 一次通过</span></div>
+        <div class="stat"><b>40+ 篇</b><span>团队协作完成跨文化案例</span></div>
+        <div class="stat"><b>可立即到岗</b><span>实习 / 全职机会</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ about ============ -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">01</div>
+        <div>
+          <h2 class="sec-title">关于我 <em>/ About</em></h2>
+          <p class="sec-kicker">语言是我的专业，内容是我的方法。从语料库分析到公众号推文，从课堂讲解到交互式游戏，我习惯把复杂的信息拆解成清晰、可感知的表达。</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <div class="trait" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5m0 14h16"/><rect x="7.5" y="11" width="3" height="8" rx="1"/><rect x="13.5" y="7" width="3" height="12" rx="1"/></svg></div>
+            <div>
+              <h4>数据敏感</h4>
+              <p>掌握 SPSS、Mplus、R，习惯用数据定位问题：从 6 万余字语料的高频词与显著性检验，到教学产品的学情调研与效果复盘。</p>
+            </div>
+          </div>
+          <div class="trait" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3.5 2"/></svg></div>
+            <div>
+              <h4>自我驱动</h4>
+              <p>责任心强、踏实细致。教材章节编写、200+ 份课件产出、连续多年的宣讲与社教工作，都靠稳定交付完成。</p>
+            </div>
+          </div>
+          <div class="trait" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 14.6 9l6 .9-4.3 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.4 9.9 9.4 9z"/></svg></div>
+            <div>
+              <h4>组织与规划</h4>
+              <p>执行力与协调能力强：能在短时间内策划并落地大型比赛与活动，组织讲师招新培训、月度沙龙与全国高校理论接力宣讲。</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel" data-reveal>
+            <h4>语言能力</h4>
+            <div class="chips" style="margin-top:16px">
+              <span class="chip accent">CET-4 635</span>
+              <span class="chip accent">CET-6 603</span>
+              <span class="chip accent">TEM-4 优秀</span>
+              <span class="chip accent">TEM-8 优秀</span>
+              <span class="chip accent">CATTI 三级笔译</span>
+              <span class="chip accent">商务英语专业八级</span>
+            </div>
+            <h4 style="margin-top:26px">资格证书</h4>
+            <div class="chips" style="margin-top:16px">
+              <span class="chip">高中英语教师资格证</span>
+              <span class="chip">心理健康教育教师资格证</span>
+              <span class="chip">国际中文教师资格证</span>
+            </div>
+          </div>
+
+          <div class="panel" data-reveal>
+            <h4>工具与技能</h4>
+            <dl class="kv" style="margin:0">
+              <dt>数据分析</dt>
+              <dd>SPSS · Mplus · R · Excel</dd>
+              <dt>语料与爬取</dt>
+              <dd>CLAWS · AntConc · Octoparse · log-likelihood 检验</dd>
+              <dt>内容与设计</dt>
+              <dd>秀米 · 剪映 · Canva · PowerPoint · 微信公众号 / 小红书运营</dd>
+              <dt>AI 与开发</dt>
+              <dd>AI 辅助内容生产 · Vibe Coding 制作交互式学习页面</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ works ============ -->
+  <section class="sec" id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">02</div>
+        <div>
+          <h2 class="sec-title">作品 <em>/ Works</em></h2>
+          <p class="sec-kicker">重点项目：AI 辅助内容生产、教育运营与跨文化交互；另有文化宣传设计和新媒体作品。</p>
+        </div>
+      </div>
+
+      <!-- (一) -->
+      <div class="sub-head">
+        <span class="sub-index">（一）</span>
+        <h3>武汉革命地标多语宣传三折页</h3>
+        <span class="note">Canva 制作 · 文化传播设计</span>
+      </div>
+
+      <article class="feature" data-reveal>
+        <!-- 想换成真实设计稿：把下面的结构示意整块替换为一张图片即可。
+             做法：把设计稿导出为 assets/shots/trifold.jpg，再用一个 img 标签替换本段 div.mock 的内容。 -->
+        <div class="mock">
+          <!-- 三折页结构示意（矢量占位，可替换为真实设计稿导出图） -->
+          <svg viewBox="0 0 520 320" role="img" aria-label="三折页结构示意图">
+            <defs>
+              <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#F4F1EA"/>
+              </linearGradient>
+              <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#17564F"/>
+                <stop offset="100%" stop-color="#2E7D72"/>
+              </linearGradient>
+            </defs>
+            <g>
+              <rect x="34" y="40" width="150" height="228" rx="8" fill="url(#pg)" stroke="#E2DFD6"/>
+              <rect x="185" y="40" width="150" height="228" rx="8" fill="url(#pg)" stroke="#E2DFD6"/>
+              <rect x="336" y="40" width="150" height="228" rx="8" fill="url(#pg)" stroke="#E2DFD6"/>
+              <line x1="184" y1="34" x2="184" y2="274" stroke="#CFCBC0" stroke-dasharray="4 5"/>
+              <line x1="335" y1="34" x2="335" y2="274" stroke="#CFCBC0" stroke-dasharray="4 5"/>
+
+              <rect x="52" y="58" width="114" height="66" rx="6" fill="url(#ac)" opacity=".9"/>
+              <circle cx="66" cy="72" r="5" fill="#FBFBF9" opacity=".85"/>
+              <rect x="52" y="136" width="86" height="7" rx="3.5" fill="#17564F" opacity=".55"/>
+              <rect x="52" y="150" width="106" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="52" y="162" width="72" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="52" y="182" width="114" height="0.8" fill="#E2DFD6"/>
+              <rect x="52" y="196" width="58" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="52" y="208" width="94" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="52" y="220" width="80" height="5" rx="2.5" fill="#B9B5A9"/>
+
+              <rect x="203" y="58" width="114" height="86" rx="6" fill="#EDE7DB"/>
+              <path d="M207 118h106" stroke="#D9D2C4"/>
+              <path d="M214 100l16-14 14 12 18-16 22 20" stroke="#17564F" stroke-width="1.6" fill="none" opacity=".8"/>
+              <circle cx="252" cy="78" r="6" fill="#2E7D72" opacity=".8"/>
+              <rect x="203" y="156" width="76" height="7" rx="3.5" fill="#17564F" opacity=".55"/>
+              <rect x="203" y="170" width="108" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="203" y="182" width="88" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="203" y="202" width="108" height="0.8" fill="#E2DFD6"/>
+              <rect x="203" y="216" width="62" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="203" y="228" width="96" height="5" rx="2.5" fill="#B9B5A9"/>
+
+              <rect x="354" y="58" width="114" height="52" rx="6" fill="#F0EDE6"/>
+              <rect x="366" y="70" width="60" height="6" rx="3" fill="#17564F" opacity=".45"/>
+              <rect x="366" y="84" width="88" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="366" y="96" width="46" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="354" y="120" width="114" height="48" rx="6" fill="#EAF1EF"/>
+              <circle cx="370" cy="134" r="4.5" fill="#17564F" opacity=".7"/>
+              <rect x="380" y="130" width="74" height="6" rx="3" fill="#17564F" opacity=".35"/>
+              <rect x="366" y="146" width="88" height="5" rx="2.5" fill="#A9B5B2"/>
+              <rect x="354" y="184" width="114" height="0.8" fill="#E2DFD6"/>
+              <rect x="354" y="196" width="44" height="44" rx="6" fill="#EDE7DB"/>
+              <g fill="#B9B5A9">
+                <rect x="354" y="230" width="2.5" height="2.5"/><rect x="358" y="230" width="2.5" height="2.5"/>
+                <rect x="362" y="230" width="2.5" height="2.5"/><rect x="366" y="230" width="2.5" height="2.5"/>
+                <rect x="370" y="230" width="2.5" height="2.5"/><rect x="374" y="230" width="2.5" height="2.5"/>
+                <rect x="354" y="234" width="2.5" height="2.5"/><rect x="358" y="234" width="2.5" height="2.5"/>
+              </g>
+              <rect x="404" y="196" width="64" height="7" rx="3.5" fill="#17564F" opacity=".55"/>
+              <rect x="404" y="210" width="58" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="404" y="222" width="48" height="5" rx="2.5" fill="#B9B5A9"/>
+              <rect x="404" y="234" width="56" height="5" rx="2.5" fill="#B9B5A9"/>
+
+              <text x="34" y="26" font-family="Songti SC, serif" font-size="12" fill="#8B9098" letter-spacing="2">PANEL 01 · 封面</text>
+              <text x="185" y="26" font-family="Songti SC, serif" font-size="12" fill="#8B9098" letter-spacing="2">PANEL 02 · 路线</text>
+              <text x="336" y="26" font-family="Songti SC, serif" font-size="12" fill="#8B9098" letter-spacing="2">PANEL 03 · 故事</text>
+              <text x="34" y="300" font-family="Songti SC, serif" font-size="12" fill="#8B9098" letter-spacing="1">示意：三折页版面结构与信息层级</text>
+            </g>
+          </svg>
+          <div class="mock-cap">版面结构：封面 · 参观动线 · 地标故事</div>
+        </div>
+
+        <div>
+          <h4>以武汉四处革命历史地标为线索，制作多语主题折页</h4>
+          <p class="desc">项目选取巴公房子、黎黄陂路等四处武汉革命历史地标，以中、英、法、德多语对照呈现。团队通过实地走访、文献查阅、史料整理和翻译，挖掘地标背后的历史故事，探索红色文化的国际传播方式。</p>
+          <div class="meta">
+            <div><span>交付物</span><span>多语种宣传三折页（Canva 制作）</span></div>
+            <div><span>项目方式</span><span>团队实地走访 · 史料整理 · 多语翻译</span></div>
+            <div><span>面向对象</span><span>来汉国际访客、留学生与文化爱好者</span></div>
+          </div>
+          <div class="chips">
+            <span class="chip">城市文化传播</span>
+            <span class="chip">多语种文案</span>
+            <span class="chip">信息层级设计</span>
+            <span class="chip">Canva</span>
+          </div>
+          <div class="action">
+            <a class="btn" href="https://mp.weixin.qq.com/s/_p-BCiFKO7u1yQG_LMhT_g" target="_blank" rel="noopener">查看项目推文 ↗</a>
+            <a class="btn" href="https://pan.quark.cn/s/954371788984" target="_blank" rel="noopener">
+              查看完整三折页
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></svg>
+            </a>
+            <span class="muted">链接为夸克网盘分享（需登录查看）</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- (二) -->
+      <div class="sub-head">
+        <span class="sub-index">（二）</span>
+        <h3>工作撰写公众号推文</h3>
+        <span class="note">吉安市博物馆 · DUT 国际处 · DUT 公共基础</span>
+      </div>
+
+      <div class="grid-3">
+        <article class="card" data-reveal>
+          <a class="card-media" href="https://mp.weixin.qq.com/s/TAwCMhKkujhVlG3nRyWzqw" target="_blank" rel="noopener">
+            <img src="assets/covers/work-1.jpg" alt="公众号推文《活动预告｜观展竞答承护国志，巧手拼图传浩然风》封面图" loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span>吉安市博物馆</span><i class="dot"></i><time>2026.07</time></div>
+            <h3 class="card-title"><a href="https://mp.weixin.qq.com/s/TAwCMhKkujhVlG3nRyWzqw" target="_blank" rel="noopener">活动预告｜观展竞答承护国志，巧手拼图传浩然风</a></h3>
+            <p class="card-text">博物馆社教活动预告：把展览内容转译成可参与的观展竞答与手工体验，完成文案撰写与图文排版。</p>
+            <a class="card-link" href="https://mp.weixin.qq.com/s/TAwCMhKkujhVlG3nRyWzqw" target="_blank" rel="noopener">阅读原文 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <a class="card-media" href="https://mp.weixin.qq.com/s/Zl---oK9ejtuxO7NAWYZww" target="_blank" rel="noopener">
+            <img src="assets/covers/work-2.jpg" alt="公众号推文《碧海潮涌迎远客，八月滨城连理缘》封面图" loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span>DUT 国际处</span><i class="dot"></i><time>2024.08</time></div>
+            <h3 class="card-title"><a href="https://mp.weixin.qq.com/s/Zl---oK9ejtuxO7NAWYZww" target="_blank" rel="noopener">“碧海潮涌迎远客，八月滨城连理缘”——国际学生暑期营活动纪实（下期）</a></h3>
+            <p class="card-text">国际学生暑期营纪实稿件：记录跨文化体验现场，用叙事化表达呈现中外学生的交流细节。</p>
+            <a class="card-link" href="https://mp.weixin.qq.com/s/Zl---oK9ejtuxO7NAWYZww" target="_blank" rel="noopener">阅读原文 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <a class="card-media" href="https://mp.weixin.qq.com/s/ZJ1QeHrzVqmeMrKGCPjBgw" target="_blank" rel="noopener">
+            <img src="assets/covers/work-3.jpg" alt="公众号推文《思源·笃行 | 袁申如：求真务实，行胜于言》封面图" loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span>DUT 公共基础</span><i class="dot"></i><time>2024.11</time></div>
+            <h3 class="card-title"><a href="https://mp.weixin.qq.com/s/ZJ1QeHrzVqmeMrKGCPjBgw" target="_blank" rel="noopener">思源·笃行｜袁申如：求真务实，行胜于言</a></h3>
+            <p class="card-text">人物专访类稿件：从国奖学习、科研实践到学生工作，梳理成长叙事并完成采访与成稿。</p>
+            <a class="card-link" href="https://mp.weixin.qq.com/s/ZJ1QeHrzVqmeMrKGCPjBgw" target="_blank" rel="noopener">阅读原文 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <!-- (三) -->
+      <div class="sub-head">
+        <span class="sub-index">（三）</span>
+        <h3>个人公众号操作分享</h3>
+        <span class="note">公众号「潇洒的大雁」· 小编 / 作者</span>
+      </div>
+
+      <div class="grid-2">
+        <article class="card" data-reveal>
+          <a class="card-media wide" href="https://mp.weixin.qq.com/s/CzkXkf8WOwH5haL6Pqi_Lw" target="_blank" rel="noopener">
+            <img src="assets/covers/own-1.jpg" alt="公众号文章《单词贪吃蛇小游戏代码 适合单词教学》封面图" loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span>潇洒的大雁</span><i class="dot"></i><time>2025.03</time></div>
+            <h3 class="card-title"><a href="https://mp.weixin.qq.com/s/CzkXkf8WOwH5haL6Pqi_Lw" target="_blank" rel="noopener">单词贪吃蛇小游戏代码｜适合单词教学</a></h3>
+            <p class="card-text">用 AI 写代码把英语单词做成类贪吃蛇小游戏，并整理成一线教师可直接取用的教学工具分享。</p>
+            <div class="card-tagrow">
+              <span class="chip">AI 辅助开发</span>
+              <span class="chip">词汇教学</span>
+            </div>
+            <a class="card-link" href="https://mp.weixin.qq.com/s/CzkXkf8WOwH5haL6Pqi_Lw" target="_blank" rel="noopener">阅读原文 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <a class="card-media wide" href="https://mp.weixin.qq.com/s/9wIK9Y3lZ02KGIXH2DXIpg" target="_blank" rel="noopener">
+            <img src="assets/covers/own-2.jpg" alt="公众号文章《trendradar爬取多平台新闻并结合AI分析》封面图" loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span>潇洒的大雁</span><i class="dot"></i><time>2025.12</time></div>
+            <h3 class="card-title"><a href="https://mp.weixin.qq.com/s/9wIK9Y3lZ02KGIXH2DXIpg" target="_blank" rel="noopener">trendradar 爬取多平台新闻并结合 AI 分析</a></h3>
+            <p class="card-text">把多平台热点抓取与 AI 分析串成一套可复用的信息处理流程，记录工具搭建思路与操作方法。</p>
+            <div class="card-tagrow">
+              <span class="chip">信息检索</span>
+              <span class="chip">AI 应用</span>
+            </div>
+            <a class="card-link" href="https://mp.weixin.qq.com/s/9wIK9Y3lZ02KGIXH2DXIpg" target="_blank" rel="noopener">阅读原文 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <!-- (四) -->
+      <div class="sub-head">
+        <span class="sub-index">（四）</span>
+        <h3>GitHub 交互项目示例</h3>
+        <span class="note">在线可玩 · Vibe Coding 开发</span>
+      </div>
+
+      <div class="projects">
+        <article class="project" data-reveal>
+          <div class="project-media">
+            <div class="phone">
+              <img src="assets/shots/proj-exchange-mobile.png" alt="跨文化体验小游戏《交换生 14 天》移动版界面截图" loading="lazy" />
+            </div>
+          </div>
+          <div class="project-body">
+            <h4>交换生 14 天 · 跨文化之旅</h4>
+            <div class="sub">跨文化体验小游戏 · 移动版 / PC 版</div>
+            <p>以“14 天交换生生活”为脚本的跨文化体验游戏：每位 NPC 有独立性格与连续剧情，玩家的每一次选择都会影响结局。用游戏化方式呈现文化差异与共情，同时作为跨文化交际教材章节的互动入口。</p>
+            <div class="card-tagrow">
+              <span class="chip">游戏化学习</span>
+              <span class="chip">分支剧情</span>
+              <span class="chip">AI 辅助开发</span>
+            </div>
+            <div class="project-links">
+              <a class="plink" href="https://yuanwkwk.github.io/exchange-life-simulator-mobile/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></svg>
+                <span class="label">移动版 · 在线试玩</span>
+                <span class="url">yuanwkwk.github.io/exchange-life-simulator-mobile</span>
+              </a>
+              <a class="plink" href="https://yuanwkwk.github.io/culture-stimulator/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg>
+                <span class="label">PC 版 · 桌面端界面</span>
+                <span class="url">yuanwkwk.github.io/culture-stimulator</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project-media">
+            <div class="window">
+              <div class="window-bar"><i></i><i></i><i></i></div>
+              <img src="assets/shots/proj-xiyou.png" alt="西游记互动文本游戏网页界面截图" loading="lazy" />
+            </div>
+          </div>
+          <div class="project-body">
+            <h4>Interactive Fiction: Sun Wukong and the Journey to the West</h4>
+            <div class="sub">西游记互动文本游戏 · 英文创作</div>
+            <p>用英文互动小说重述《西游记》：玩家扮演孙悟空，护送唐僧西行取经，需要做出 10 次关键选择，不同选择通向不同结局。改编忠于原著，并选用正式译本用语，向海外读者传递坚持、智慧、勇于挑战权威等中国文化价值观。</p>
+            <div class="card-tagrow">
+              <span class="chip">英文文本创作</span>
+              <span class="chip">分支叙事</span>
+              <span class="chip">文化外译</span>
+            </div>
+            <div class="project-links">
+              <a class="plink" href="https://shrieen-d5grumyu338fc7c63-1427971374.tcloudbaseapp.com/index.html" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></svg>
+                <span class="label">打开互动页面</span>
+                <span class="url">tcloudbaseapp.com</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ experience ============ -->
+  <section class="sec" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">03</div>
+        <div>
+          <h2 class="sec-title">经历 <em>/ Experience</em></h2>
+          <p class="sec-kicker">从语言学到内容生产，从课堂到博物馆现场：教育背景、科研项目与实习实践。</p>
+        </div>
+      </div>
+
+      <div class="tl-group">
+        <h3>教育背景</h3>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2025.09 – 2028.06</div>
+          <div class="tl-main">
+            <h4>华中科技大学 · 外国语言学（硕士）</h4>
+            <div class="org">外国语学院</div>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2021.09 – 2025.06</div>
+          <div class="tl-main">
+            <h4>大连理工大学 · 商务英语（本科）</h4>
+            <div class="org">辽宁省优秀毕业生 · 国家奖学金</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-group">
+        <h3>科研与项目</h3>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2025.10 – 2026.04</div>
+          <div class="tl-main">
+            <h4>数智时代跨文化交际教材编写</h4>
+            <div class="org">国社科项目阶段成果 · 项目成员 / 章节编写者</div>
+            <ul>
+              <li>基于 CERF 模型，独立完成三个章节的内容框架设计与编写，并审核其他成员内容，确保模型与逻辑一致。</li>
+              <li>开发 AI 辅助案例生产流程，覆盖资料检索、视频内容提取、案例筛选与改编；推动团队协作完成 40+ 篇跨文化能力考试案例。</li>
+              <li>引入 AI 赋能学习体验：制作多模态短视频与数字人助教用于章节导入，用 Vibe Coding 开发知识点交互游戏，实现学习游戏化。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2024.01 – 2025.04</div>
+          <div class="tl-main">
+            <h4>英译版政府工作报告语言简明化现象研究</h4>
+            <div class="org">省级项目 · 负责人</div>
+            <ul>
+              <li>清理审核 6 万余字译文，建立近 7 年政府工作报告英文语料库；用 CLAWS 完成词性标注。</li>
+              <li>用 AntConc 完成高频词统计、类符／形符比计算与逻辑连接词多维分析，并通过 log-likelihood 验证显著性差异。</li>
+              <li>产出论文一篇。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2023.01 – 2024.04</div>
+          <div class="tl-main">
+            <h4>后真相背景下“纳入母题框架叙事”修辞现象研究</h4>
+            <div class="org">省级项目 · 核心成员</div>
+            <ul>
+              <li>使用 Octoparse 从各大新闻网站爬取反转新闻，提取共性母题，分析修辞者应用“对抗性母题框架叙事”策略的三个层次。</li>
+              <li>详细分析新闻话语修辞传播策略，产出论文《后真相背景下“纳入母题框架叙事”修辞现象研究》。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-group">
+        <h3>实习与实践</h3>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2026.09 – 2026.11</div>
+          <div class="tl-main">
+            <h4>新东方 · 社群运营实习生</h4>
+            <div class="org">智慧学习部 · 中学学习机英语</div>
+            <ul>
+              <li>运营 7 个班级微信群，覆盖 160+ 名学员、300+ 名家长，负责答疑、学情反馈与招生转化支持。</li>
+              <li>设计 AI 辅助学情处理流程，支持入门测照片批量识别、匹配命名、错题统计与表格生成，将反馈提前至下课时发布。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2025.01 – 2025.04</div>
+          <div class="tl-main">
+            <h4>网易有道事业群 · 英语教研实习生</h4>
+            <div class="org">素养课程事业部</div>
+            <ul>
+              <li>深度参与四个年级产品研发，负责资料收集、审校与内容测试，确保产出符合课标要求与教学实际。</li>
+              <li>调研听力口语产品学情痛点，从教与学双视角评估用于迭代；协助制作 200+ 份课件，助力续班率升至 83%。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2025.09 – 至今</div>
+          <div class="tl-main">
+            <h4>研究生红色理论学讲团 · 微党课讲师</h4>
+            <div class="org">讲师部</div>
+            <ul>
+              <li>承担微党课备课与授课，面向校内及外部单位开展理论宣讲，善于把宏大叙事转化为生动易懂的语言。</li>
+              <li>组织讲师招新培训与月度沙龙，策划全国高校理论接力宣讲活动，协助志愿者培训与嘉宾对接。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-when">2026.07 – 2026.08</div>
+          <div class="tl-main">
+            <h4>吉安市博物馆 · 社教部实习生</h4>
+            <div class="org">社会教育与宣传</div>
+            <ul>
+              <li>协助开展社区宣讲等社教活动，撰写新闻稿与公众号推文，负责现场教学实施与秩序维护。</li>
+              <li>熟悉展览大纲与庐陵文化，为观众提供公益讲解、场馆导览、路线指引与参观流程咨询。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ honors ============ -->
+  <section class="sec" id="honors">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">04</div>
+        <div>
+          <h2 class="sec-title">荣誉 <em>/ Honors</em></h2>
+          <p class="sec-kicker">奖学金与个人称号。</p>
+        </div>
+      </div>
+
+      <div class="honor-grid">
+        <div class="honor-item" data-reveal>
+          <span class="yr">奖学金</span>
+          <p><strong>国家奖学金</strong>（前 3%）、<strong>英才奖学金</strong>（前 1%）、学习优秀（一等）奖学金等共 10 项专项奖学金。</p>
+        </div>
+        <div class="honor-item" data-reveal>
+          <span class="yr">个人称号</span>
+          <p><strong>辽宁省优秀毕业生</strong>（前 1%）、校优秀毕业生、校优秀三好学生（连续 3 年）、校优秀团员。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ contact ============ -->
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">05</div>
+        <div>
+          <h2 class="sec-title">联系 <em>/ Contact</em></h2>
+        </div>
+      </div>
+
+      <div class="contact" data-reveal>
+        <div class="contact-grid">
+          <div>
+            <h3>期待与你聊聊内容、教育与跨文化传播</h3>
+            <p>目前可立即到岗，欢迎实习与全职机会；也欢迎交流 AI 辅助内容生产、教育产品运营与跨文化传播项目。</p>
+          </div>
+          <div class="mailbag">
+            <a class="mailcard" href="mailto:yuanshenru@outlook.com">
+              <div>
+                <span class="k">邮箱 EMAIL</span>
+                <span class="v">yuanshenru@outlook.com</span>
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+            <a class="mailcard" href="tel:15170693913">
+              <div>
+                <span class="k">手机 PHONE</span>
+                <span class="v">151-7069-3913</span>
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>
+            </a>
+            <button class="mailcard" type="button" data-copy="yuanshenru@outlook.com">
+              <div>
+                <span class="k">快速操作</span>
+                <span class="v">复制邮箱地址</span>
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"/><path d="M15.5 5.5v-1a2 2 0 0 0-2-2h-9a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h1"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <span>© 2026 袁申如 · 个人作品集</span>
+        <span>华中科技大学 · 外国语语言学 · 可立即到岗</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* nav shadow */
+  var nav = document.getElementById("nav");
+  var onScroll = function(){ nav.classList.toggle("is-stuck", window.scrollY > 12); };
+  onScroll();
+  window.addEventListener("scroll", onScroll, {passive:true});
+
+  /* reveal */
+  var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+  if (reduce || !("IntersectionObserver" in window)) {
+    items.forEach(function(el){ el.classList.add("is-in"); });
+  } else {
+    var n = 0;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        el.style.transitionDelay = Math.min(n % 3, 2) * 90 + "ms";
+        el.classList.add("is-in");
+        n++;
+        io.unobserve(el);
+      });
+    }, {rootMargin:"0px 0px -12% 0px", threshold:0.12});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  /* nav active link */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
+  if (sections.length && "IntersectionObserver" in window) {
+    var seen = {};
+    var navIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ seen[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0; });
+      var best = null, bestRatio = 0;
+      Object.keys(seen).forEach(function(id){
+        if (seen[id] > bestRatio) { bestRatio = seen[id]; best = id; }
+      });
+      links.forEach(function(a){
+        a.classList.toggle("is-active", best !== null && a.getAttribute("href") === "#" + best);
+      });
+    }, {rootMargin:"-45% 0px -45% 0px", threshold:[0, .25, .5, .75, 1]});
+    sections.forEach(function(s){ navIo.observe(s); });
+  }
+
+  /* copy email */
+  var toast = document.getElementById("toast");
+  var timer = null;
+  var showToast = function(msg){
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(timer);
+    timer = setTimeout(function(){ toast.classList.remove("is-on"); }, 2000);
+  };
+  Array.prototype.slice.call(document.querySelectorAll("[data-copy]")).forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var text = btn.getAttribute("data-copy");
+      var done = function(){ showToast("已复制：" + text); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function(){ showToast(text); });
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch(e) { showToast(text); }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
